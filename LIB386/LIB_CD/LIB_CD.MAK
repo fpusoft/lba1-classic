@@ -18,14 +18,14 @@ $(LIB).LIB: $(OBJETS1) $(OBJETS2) $(OBJETS3) $(OBJETS4)
 
 	@WLIB $(WLIBFLAGS) $(LIB) @clibmak.rsp
 	@del clibmak.rsp
-	@prntitre G "$(LIB)"
+#	@prntitre G "$(LIB)"
 
 .asm.obj:
-	@PRNTITRE M "$*.ASM"
+#	@PRNTITRE M "$*.ASM"
 	@TASM $(TASMFLAGS) $*;
 
 .c.obj:
-	@PRNTITRE M "$*.C"
+#	@PRNTITRE M "$*.C"
 	@wcl386 $(WCFLAGS) $*
 
 

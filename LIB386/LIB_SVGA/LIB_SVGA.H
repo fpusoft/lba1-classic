@@ -3,9 +3,9 @@
 ;-----------------------------------------------------------------------------*/
 
 #ifdef	WATCOM9
-#pragma library ( "f:\projet\lib386\lib_svga\lb9_svga.lib" );
+#pragma library ( "\projet\lib386\lib_svga\lb9_svga.lib" );
 #else
-#pragma library ( "f:\projet\lib386\lib_svga\lib_svga.lib" );
+#pragma library ( "\projet\lib386\lib_svga\lib_svga.lib" );
 #endif
 
 /*-----------------------------------------------------------------------------*/
@@ -56,7 +56,7 @@ extern  WORD    Ymax ;
 extern  WORD    TabCoulG[]      ;
 extern  WORD    TabCoulD[]      ;
 
-/*â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€*/
+/*ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ*/
 /*                              MOUSE.C                                     */
 extern  volatile LONG   Click   ;
 extern  volatile LONG   Mouse_X ;

@@ -1,23 +1,23 @@
 # name the compiler
 !ifdef %HOME
 !ifeq WATCOM9 yes
-CC = c:\compil\watcom\bin\wcc386p
-CL = c:\compil\watcom\binb\Wcl386
-WL = c:\compil\watcom\binb\wlib
+CC = wcc386p
+CL = Wcl386
+WL = wlib
 !else
-CC = c:\compil\watcom10\binb\wcc386
-CL = c:\compil\watcom10\binb\Wcl386
-WL = c:\compil\watcom10\binb\wlib
+CC = wcc386
+CL = Wcl386
+WL = wlib
 !endif
 !else
 !ifeq WATCOM9 yes
-CC = f:\compil\watcom\bin\wcc386p
-CL = f:\compil\watcom\binb\Wcl386
-WL = f:\compil\watcom\binb\wlib
+CC = wcc386p
+CL = Wcl386
+WL = wlib
 !else
-CC = f:\compil\watcom10\binb\wcc386
-CL = f:\compil\watcom10\binb\Wcl386
-WL = f:\compil\watcom10\binb\wlib
+CC = wcc386
+CL = Wcl386
+WL = wlib
 !endif
 !endif
 
@@ -49,18 +49,18 @@ EXE      = LBA0
 $(EXE).exe: $(OBJETS1) $(OBJETS2) $(OBJETS3) $(OBJETS4) $(OBJETS5) $(OBJETS6)
 	if exist tempo.obs del tempo.obs
 	if exist tempo.obj del tempo.obj
-	copy    /B *.obj tempo.obs
-	ren     tempo.obs tempo.obj
-	$(CL) $(LFLAGS) /fe=$(EXE).exe tempo.obj
-	del     tempo.obj
-	prntitre M "$(EXE) OK"
+#	copy    /B *.obj tempo.obs
+#	ren     tempo.obs tempo.obj
+	$(CL) $(LFLAGS) /fe=$(EXE).exe *.obj
+#	del     tempo.obj
+#	prntitre M "$(EXE) OK"
 #       wstrip $(EXE)
 	copy $(EXE).exe \projet\lba\game
 
 .c.obj :
-	PRNTITRE M "$*.C"
+#	PRNTITRE M "$*.C"
 	$(CC) $^& $(CFLAGS)
 
 .asm.obj :
-	PRNTITRE M "$*.ASM"
+#	PRNTITRE M "$*.ASM"
 	$(ASM) $(AFLAGS) $^&.ASM

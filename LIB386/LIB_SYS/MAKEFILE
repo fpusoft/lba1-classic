@@ -12,8 +12,8 @@ WL = c:\compil\watcom10\binb\wlib
 CC = f:\compil\watcom\bin\wcc386p
 WL = f:\compil\watcom\binb\wlib
 !else
-CC = f:\compil\watcom10\binb\wcc386
-WL = f:\compil\watcom10\binb\wlib
+CC = wcc386
+WL = wlib
 !endif
 !endif
 
@@ -49,12 +49,12 @@ $(LIB).LIB: $(OBJETS1) $(OBJETS2) $(OBJETS3) $(OBJETS4)
 
 	@$(WL) $(LFLAGS) $(LIB) @clibmak.rsp
 	@del clibmak.rsp
-	@prntitre G "$(LIB)"
+#	@prntitre G "$(LIB)"
 
 .c.obj :
-	PRNTITRE M "$*.C"
+#	PRNTITRE M "$*.C"
 	$(CC) $^& $(CFLAGS)
 
 .asm.obj :
-	PRNTITRE M "$*.ASM"
+#	PRNTITRE M "$*.ASM"
 	$(ASM) $(AFLAGS) $^&.ASM

@@ -65,7 +65,7 @@ Touch			proc	,\
 			sub	cx, 1980
 			mov	al, cl
 			shl	ax, 9
-			or	[date], ax		;' AnnÃ©e
+			or	[date], ax		;' Ann‚e
 
 ;----------------------' Change time and date for this file
 
